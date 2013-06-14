@@ -71,7 +71,7 @@ exports.traverser = function(node, st, c) {
         if (v[j].type) c(v[j], st);
         else exports.traverser(v[j], st, c);
       }
-    } else if (typeof v == 'object' && !(v instanceof RegExp)) {
+    } else if (typeof v == 'object' && !(v instanceof RegExp) && v.type) {
       c(v, st);
     }
   }
