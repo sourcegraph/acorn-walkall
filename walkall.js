@@ -69,7 +69,7 @@ exports.traverser = function(node, st, c) {
     if (v instanceof Array) {
       for (var j = 0; j < v.length; ++j) {
         if (v[j].type) c(v[j], st);
-        else exports.traverser(v[j], st, c);
+        else if (typeof v[j] == 'object') exports.traverser(v[j], st, c);
       }
     } else if (typeof v == 'object' && !(v instanceof RegExp) && v.type) {
       c(v, st);
