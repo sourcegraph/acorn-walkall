@@ -1,0 +1,25 @@
+{
+  "name": "walkall",
+  "description": "Provides a walker for the acorn JavaScript parser that traverses all AST nodes",
+  "version": "0.0.1",
+  "readmeFilename": "README.md",
+  "author": {
+    "name": "Quinn Slack",
+    "email": "sqs@sourcegraph.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sourcegraph/acorn-walkall.git"
+  },
+  "main": "walkall.js",
+  "dependencies": {
+    "acorn": "0.3.1"
+  },
+  "devDependencies": {
+    "mocha": "1.10.0",
+    "should": "~1.2.2"
+  },
+  "scripts": {
+    "test": "mocha"
+  }
+}
