@@ -10,8 +10,8 @@ describe('walkall', function() {
     }), walkall.traversers);
     nodeTypes.should.eql([
       'Identifier',
-      'Identifier',
       'BlockStatement',
+      'Identifier',
       'FunctionExpression',
       'VariableDeclarator',
       'Identifier',

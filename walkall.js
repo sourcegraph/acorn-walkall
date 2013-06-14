@@ -61,13 +61,15 @@ exports.makeVisitors = function(c) {
 // traverser is an AST visitor that programmatically traverses the AST node by inspecting its object
 // structure (as opposed to following hard-coded paths).
 exports.traverser = function(node, st, c) {
-  for (var key in node) if (node.hasOwnProperty(key)) {
+  var keys = Object.keys(node).sort();
+  for (var i = 0; i < keys.length; ++i) {
+    var key = keys[i];
     var v = node[key];
     if (!v) continue;
     if (v instanceof Array) {
-      for (var i = 0; i < v.length; ++i) {
-        if (v[i].type) c(v[i], st);
-        else exports.traverser(v[i], st, c);
+      for (var j = 0; j < v.length; ++j) {
+        if (v[j].type) c(v[j], st);
+        else exports.traverser(v[j], st, c);
       }
     } else if (typeof v == 'object' && !(v instanceof RegExp)) {
       c(v, st);
