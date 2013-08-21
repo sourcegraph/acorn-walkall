@@ -4,7 +4,7 @@ acorn-walkall
 acorn-walkall provides a custom walker for Marijn Haverbeke's [acorn JavaScript
 parser](http://marijnhaverbeke.nl/acorn/) that traverses all AST nodes.
 
-Documentation: [acorn-walkall on Sourcegraph](https://sourcegraph.com/repos/github.com/sourcegraph/acorn-walkall)
+Documentation: [acorn-walkall on Sourcegraph](https://sourcegraph.com/github.com/sourcegraph/acorn-walkall)
 
 
 Usage
