@@ -1,10 +1,10 @@
 acorn-walkall
 =====================
 
-[![xrefs](https://sourcegraph.com/api/repos/github.com/sourcegraph/acorn-walkall/badge?type=xrefs)](https://sourcegraph.com/github.com/sourcegraph/acorn-walkall)
-[![Most used function](https://sourcegraph.com/api/repos/github.com/sourcegraph/acorn-walkall/badge?type=top-func)](https://sourcegraph.com/github.com/sourcegraph/acorn-walkall)
-[![Number of funcs](https://sourcegraph.com/api/repos/github.com/sourcegraph/acorn-walkall/badge?type=funcs)](https://sourcegraph.com/github.com/sourcegraph/acorn-walkall)
-[![Status](https://sourcegraph.com/api/repos/github.com/sourcegraph/acorn-walkall/badge?type=status)](https://sourcegraph.com/github.com/sourcegraph/acorn-walkall)
+[![xrefs](https://sourcegraph.com/api/repos/github.com/sourcegraph/acorn-walkall/badges/xrefs.png)](https://sourcegraph.com/github.com/sourcegraph/acorn-walkall)
+[![Most used function](https://sourcegraph.com/api/repos/github.com/sourcegraph/acorn-walkall/badges/top-func.png)](https://sourcegraph.com/github.com/sourcegraph/acorn-walkall)
+[![Number of funcs](https://sourcegraph.com/api/repos/github.com/sourcegraph/acorn-walkall/badges/funcs.png)](https://sourcegraph.com/github.com/sourcegraph/acorn-walkall)
+[![Status](https://sourcegraph.com/api/repos/github.com/sourcegraph/acorn-walkall/badges/status.png)](https://sourcegraph.com/github.com/sourcegraph/acorn-walkall)
 
 
 acorn-walkall provides a custom walker for Marijn Haverbeke's [acorn JavaScript
