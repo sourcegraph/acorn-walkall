@@ -1,7 +1,7 @@
 {
   "name": "walkall",
   "description": "Provides a walker for the acorn JavaScript parser that traverses all AST nodes",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "readmeFilename": "README.md",
   "author": {
     "name": "Quinn Slack",
