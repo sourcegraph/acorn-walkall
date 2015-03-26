@@ -1,4 +1,4 @@
-var acorn = require('acorn'), walk = require('acorn/util/walk');
+var acorn = require('acorn'), walk = require('acorn/dist/walk');
 
 // types is an array of all SpiderMonkey AST node types recognized by acorn.
 var types = exports.types = [
@@ -17,6 +17,7 @@ var types = exports.types = [
   'DoWhileStatement',
   'EmptyStatement',
   'ExportDeclaration',
+  'ExportNamedDeclaration',
   'Expression',
   'ExpressionStatement',
   'ForInStatement',
@@ -30,6 +31,7 @@ var types = exports.types = [
   'IfStatement',
   'ImportDeclaration',
   'ImportSpecifier',
+  'ImportDefaultSpecifier',
   'LabeledStatement',
   'Literal',
   'LogicalExpression',

@@ -1,11 +1,14 @@
 var walkall = require('./walkall');
-var acorn = require('acorn'), should = require('should'), walk = require('acorn/util/walk');
+var acorn = require('acorn'), should = require('should'), walk = require('acorn/dist/walk');
+var fs = require('fs');
 
 describe('walkall', function() {
   var code = 'import a from "b";var foo = function(a) {}, bar = {d: 7}; let {d} = bar; export function foo() {} [1,2].map(x => x)';
-  it('walks all AST nodes', function(done) {
+
+  it('walks all AST nodes', function() {
     var ast = acorn.parse(code, {
-      ecmaVersion: 6
+      ecmaVersion: 6,
+      sourceType: 'module'
     });
     var nodeTypes = [];
     walk.simple(ast, walkall.makeVisitors(function(node) {
@@ -14,7 +17,7 @@ describe('walkall', function() {
     nodeTypes.should.eql( [
       'Literal',
       'Identifier',
-      'ImportSpecifier',
+      'ImportDefaultSpecifier',
       'ImportDeclaration',
       'Identifier',
       'BlockStatement',
@@ -38,7 +41,7 @@ describe('walkall', function() {
       'BlockStatement',
       'Identifier',
       'FunctionDeclaration',
-      'ExportDeclaration',
+      'ExportNamedDeclaration',
       'Identifier',
       'Identifier',
       'ArrowFunctionExpression',
@@ -51,6 +54,22 @@ describe('walkall', function() {
       'ExpressionStatement',
       'Program'
     ]);
-    done();
   });
+
+  it('Support entirity ES2015 module grammar', function() {
+    var code = fs.readFileSync('./node_modules/everything.js/es2015-module.js');
+    var ast = acorn.parse(code, {
+      ecmaVersion: 6,
+      sourceType: 'module'
+    });
+  });
+
+  // Enable when acorn supports it :p
+  // it('Support entirity ES2015 script grammar', function() {
+  //   var code = fs.readFileSync('./node_modules/everything.js/es2015-script.js');
+  //   var ast = acorn.parse(code, {
+  //     ecmaVersion: 6,
+  //     sourceType: 'script'
+  //   });
+  // });
 });
