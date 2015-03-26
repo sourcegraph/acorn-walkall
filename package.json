@@ -13,9 +13,10 @@
   },
   "main": "walkall.js",
   "dependencies": {
-    "acorn": "~0.12.0"
+    "acorn": "^1.0.0"
   },
   "devDependencies": {
+    "everything.js": "1.0.0",
     "mocha": "1.10.0",
     "should": "~1.2.2"
   },
