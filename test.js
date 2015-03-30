@@ -64,7 +64,7 @@ describe('walkall', function() {
     });
   });
 
-  // Enable when acorn supports it :p
+  // Enable when acorn supports it :p (https://github.com/marijnh/acorn/issues/227)
   // it('Support entirity ES2015 script grammar', function() {
   //   var code = fs.readFileSync('./node_modules/everything.js/es2015-script.js');
   //   var ast = acorn.parse(code, {
