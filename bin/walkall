@@ -7,7 +7,7 @@ if (!file) {
   process.exit(1);
 }
 
-var acorn = require('acorn'), fs = require('fs'), walk = require('acorn/util/walk'), walkall = require('../walkall');
+var acorn = require('acorn'), fs = require('fs'), walk = require('acorn/dist/walk'), walkall = require('../walkall');
 fs.readFile(file, 'utf8', function(err, src) {
   if (err) {
     console.error('error:', err.message);
